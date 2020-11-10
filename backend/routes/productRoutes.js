@@ -9,7 +9,6 @@ const router = express.Router();
 router.get(
   "/",
   asyncHandler(async (req, res) => {
-    //   console.log(products);
     const products = await Product.find({});
     res.json(products);
   })
